@@ -51,7 +51,7 @@ async function registerStudent() {
         "Computer Security",
         "Database Management Systems (SQL)",
         "Machine Learning Fundamentals",
-        "Computer Security"
+        "Computer Security",
       ],
     },
     {
@@ -83,9 +83,9 @@ async function studentBalance() {
     },
   ]);
 
-  const studentId = parseInt(viewBalance.studentId); 
+  const studentId = parseInt(viewBalance.studentId);
 
-  const findStudent = students.find((s) => s.id === studentId); 
+  const findStudent = students.find((s) => s.id === studentId);
   if (findStudent) {
     console.log(
       `Account balance for student with ID ${studentId}: $${findStudent.balance.toFixed(
@@ -220,7 +220,9 @@ async function main() {
       {
         type: "list",
         name: "option",
-        message: chalk.bold.cyan("Welcome to Eira23 Student Management System! What would you like to do:"),
+        message: chalk.bold.cyan(
+          "Welcome to Eira23 Student Management System! What would you like to do:"
+        ),
         choices: [
           "Add Student",
           "Enroll Student",

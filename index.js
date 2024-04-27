@@ -35,7 +35,7 @@ async function registerStudent() {
                 "Computer Security",
                 "Database Management Systems (SQL)",
                 "Machine Learning Fundamentals",
-                "Computer Security"
+                "Computer Security",
             ],
         },
         {
