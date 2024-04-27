@@ -1,6 +1,9 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
+function displayWelcome() {
+    console.log(chalk.bold.cyan("Welcome to Eira23 Student Management System!"));
+}
 // Define an array to store student records
 const students = [];
 // Function to add student
@@ -169,6 +172,8 @@ async function showStatus() {
         console.log("Student not found.");
     }
 }
+// Call to display the welcome message
+displayWelcome();
 async function main() {
     let condition = true;
     do {
@@ -177,7 +182,7 @@ async function main() {
             {
                 type: "list",
                 name: "option",
-                message: chalk.bold.cyan("Welcome to Eira23 Student Management System! What would you like to do:"),
+                message: "Please select an option",
                 choices: [
                     "Add Student",
                     "Enroll Student",
